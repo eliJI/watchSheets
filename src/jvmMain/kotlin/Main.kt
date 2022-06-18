@@ -30,7 +30,6 @@ var dat = Database()
 @Composable
 @Preview
 fun App() {
-  //var dat = Database()
 
     Box(
         modifier = Modifier.fillMaxSize().background(Color.LightGray)
@@ -40,7 +39,7 @@ fun App() {
     }
 }
 
-
+//initialized new content item creation on actionButton click
 @Composable
 fun add(){
     Row(
@@ -57,7 +56,7 @@ fun add(){
 }
 
 
-
+//shows content list, filtering for specific search value if necessary
 @Composable
 fun showList(list:ArrayList<MediaObject>,value:String){
 
@@ -98,6 +97,7 @@ fun showList(list:ArrayList<MediaObject>,value:String){
 
 }
 
+//handles behavior of search button, calls showList to update search results
 @Composable
 fun search(list:ArrayList<MediaObject>){
     var searchVal by rememberSaveable { mutableStateOf("") }
